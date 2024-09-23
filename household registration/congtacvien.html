@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1>UBND</h1>
+            </div>
+            <div class="nav">
+                <button class="btn active">Quản lý thông báo</button>
+                <button class="btn">Xem thông tin</button>
+                <button class="btn">Xem thêm</button>
+            </div>
+            <div class="user-info">
+                <span>Cộng tác viên</span>
+                <div class="avatar">
+                    <img src="img/user.png" alt="avatar">
+                </div>
+            </div>
+        </div>
+
+        <section class="content">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>CCCD</th>
+                            <th>Họ tên</th>
+                            <th>Thông báo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows for each user -->
+                        <tr>
+                            <td>1</td>
+                            <td>435353535</td>
+                            <td>Nguyễn Văn Phát</td>
+                            <td><button class="notify-btn">Thông báo</button></td>
+                        </tr>
+                        <!-- Repeat similar rows -->
+                    </tbody>
+                </table>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <span>1</span> <span>2</span> <span>3</span> <span>...</span> <span>90</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Notification modal -->
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Thông báo</h2>
+            <textarea placeholder="Nhập nội dung thông báo..."></textarea>
+            <button class="send-btn">Gửi thông báo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

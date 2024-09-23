@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý giấy khai sinh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1>UBND</h1>
+            </div>
+            <div class="nav">
+                <button class="btn active">Quản lý giấy khai sinh</button>
+                <button class="btn">Quản lý giấy tạm trú</button>
+                <button class="btn">Quản lý hộ khẩu</button>
+                <button class="btn">Xem thông tin</button>
+                <button class="btn">Xem thêm</button>
+            </div>
+            <div class="user-info">
+                <span>Cán bộ quản lý</span>
+                <div class="avatar">
+                    <img src="img/user.png" alt="avatar">
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="content">
+                <h2>Cấp giấy khai sinh</h2>
+                <div class="filter">
+                    <select id="dropdown" onchange="window.location.href=this.value;">
+                        <option value="default" >Cấp giấy khai sinh</option>
+                        <option value="capLaiGiayKhaiSinh.html">Cấp lại giấy khai sinh</option>
+                    </select>
+                    <input type="text" placeholder="Tìm kiếm danh sách đơn đăng kí...">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>CCCD</th>
+                            <th>Thời gian đăng kí</th>
+                            <th>Lý do</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="data-table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        
+        <div class="modal" id="requestModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p><strong>CCCD:</strong> <span id="cccd"></span></p>
+                <p><strong>Họ và tên:</strong> <span id="name"></span></p>
+                <p><strong>Quan hệ với người được khai sinh:</strong> <span id="relationship"></span></p>
+                <p><strong>Họ và tên người được khai sinh:</strong> <span id="childName"></span></p>
+                <p><strong>Ngày, tháng, năm sinh:</strong> <span id="dob"></span></p>
+                <p><strong>Nơi sinh:</strong> <span id="birthPlace"></span></p>
+                <p><strong>Giới tính:</strong> <span id="gender"></span></p>
+                <p><strong>Ghi chú:</strong> <span id="note"></span></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

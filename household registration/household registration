@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý hộ khẩu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="logo">
+                <h1>UBND</h1>
+            </div>
+            <div class="nav">
+                <button class="btn">Quản lý giấy khai sinh</button>
+                <button class="btn">Quản lý giấy tạm trú</button>
+                <button class="btn active">Quản lý hộ khẩu</button>
+                <button class="btn">Xem thông tin</button>
+                <button class="btn">Xem thêm</button>
+            </div>
+            <div class="user-info">
+                <span>Cán bộ quản lý</span>
+                <div class="avatar">
+                    <img src="img/user.png" alt="avatar">
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Section for Quản lý hộ khẩu -->
+        <div class="main">
+            <div class="content">
+                <h2>Quản lý hộ khẩu</h2>
+                <div class="filter">
+                    <select>
+                        <option value="default">Quản lý hộ khẩu</option>
+                    </select>
+                    <input type="text" placeholder="Tìm kiếm hộ khẩu...">
+                    <button>Xóa mục đã chọn</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>STT</th>
+                            <th>Mã hộ khẩu</th>
+                            <th>Thời gian cấp</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-table1">
+                        <!-- <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>224435355</td>
+                            <td>15:00 06/07/2024</td>
+                            <td><button class="view-btn" onclick="openModal('224435355')">Xem chi tiết</button></td>
+                            <td>
+                                <button class="edit-btn">Chỉnh sửa</button>
+                                <button class="delete-btn">Xóa</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <!-- More pages -->
+                    <button>>></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Detailed Request -->
+        <div class="modal" id="requestModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p><strong>Mã hộ khẩu:</strong> <span id="householdId"></span></p>
+                <p><strong>Họ và tên chủ hộ:</strong> <span id="headOfHousehold"></span></p>
+                <p><strong>Địa chỉ:</strong> <span id="address"></span></p>
+                <p><strong>Ghi chú:</strong> <span id="note">Không có</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
